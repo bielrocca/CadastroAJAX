@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Lib efeitos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="_media.css">
+
+    <link rel="shortcut icon" href="social.png" type="image/x-icon">
+
+    <title>Cadastro AJAX & Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+        <form id="formulario">
+            <div class="formulario__title row" data-aos="fade-down" data-aos-delay="200">
+                <h4>Cadastre um usuário</h4>
+            </div>
+            <div class="row row__name">
+                <div class="col-5">
+                    <input type="text" id="nome" class="form-control" placeholder="Nome" data-aos="fade-right" data-aos-delay="300">
+                </div>
+                <div class="col-5">
+                    <input type="text" id="nome" class="form-control" placeholder="Sobrenome" data-aos="fade-right" data-aos-delay="400">
+                </div>
+            </div>
+            <div class="row row__email">
+                <div class="col-10">
+                    <input type="email" id="email" class="form-control" placeholder="E-mail" data-aos="fade-right" data-aos-delay="300">
+                </div>
+            </div>
+            <div class="formulario__title row mb-4" data-aos="fade-down" data-aos-delay="200">
+                <h4>Insira dados de Endereço</h4>
+            </div>
+            <div class="row row__complemento">
+                <div class="col-4 d-flex">
+                    <input type="text" id="cep" class="form-control" placeholder="CEP" data-aos="fade-right" data-aos-delay="500">
+                    <button id="btn-buscar-cep" type="button" class="btn btn-dark" data-aos="fade-right" data-aos-delay="600">
+                        <i class="bi bi-geo-alt"></i>
+                        <span class="d-none spinner-border spinner-border-sm"></span>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="endereco" class="form-control" placeholder="Endereço de residencial" data-aos="fade-right" data-aos-delay="600">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <input type="tel" id="tel" class="form-control" placeholder="Telefone / Celular" data-aos="fade-right" data-aos-delay="700">
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" placeholder="Nº da residência" data-aos="fade-right" data-aos-delay="800">
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" placeholder="Complemento" data-aos="fade-right" data-aos-delay="900">
+                </div>
+            </div>
+            <div class="row formulario__button">
+                <div class="col-3 d-flex">
+                    <button type="submit" class="btn btn-success" data-aos="fade-right" data-aos-delay="900">Enviar</button>
+                    <button type="reset" class="btn btn-danger" data-aos="fade-right" data-aos-delay="900">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
